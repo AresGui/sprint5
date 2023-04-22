@@ -1,4 +1,22 @@
 
+async function firstFunction() {
+    const weatherForecast = await fetch('https://api.open-meteo.com/v1/forecast?latitude=41.39&longitude=2.16&hourly=temperature_2m,precipitation&current_weather=true&forecast_days=1', {
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+
+    console.log(weatherForecast);
+    const forecast = await weatherForecast.json();
+    const getTemperature = forecast["current_weather"].temperature;
+    console.log(getTemperature);
+    document.getElementById("weather").innerHTML = getTemperature;
+};
+
+firstFunction();
+
+//document.getElementById("weather").innerHTML = firstFunction();
+
 const reportAcudits = [];
 const face_frown = document.getElementById("face-frown");
 const face_meh = document.getElementById("face-meh");
@@ -10,19 +28,31 @@ const next_joke = document.getElementById("next-joke");
 let score;
 let joke = "";
 
+
+const apis = [
+    'https://icanhazdadjoke.com/',
+    'https://api.chucknorris.io/jokes/random'
+];
+
 async function newJoke() {
-    const acudit = await fetch("https://icanhazdadjoke.com/", {
+    const randomIndex = Math.floor(Math.random() * 2);
+    const selectedEndpoint = apis[randomIndex];
+
+    joke = await fetch(selectedEndpoint, {
         headers: {
             'Accept': 'application/json'
         }
-    });
-    const objAcudit = await acudit.json();
-    joke = objAcudit.joke;
-    console.log(joke);
+    }).then(response => response.json()).then(data => {
 
+        if (data.value === undefined) {
+
+            return data.joke;
+        } else {
+
+            return data.value;
+        }
+    })
     document.getElementById("text").innerHTML = joke;
-
-
 
     //Mostrar botones
     face_frown.style.display = "block";
@@ -31,6 +61,8 @@ async function newJoke() {
 
     score = 0;
 }
+
+
 
 function rateJoke() {
     //date
