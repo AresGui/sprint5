@@ -6,17 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <section>
-        <div class="container">
-            <div class="joke">
-                <p>Preparat per riure?</p>
+    <div id="main-container">
+        <div id="left-container">
+            <div>
+                <img id="sol" src="images/sun.png" alt="">
             </div>
-            <input type="button" value="Següent acudit" onclick="newJoke()">
+            <div>
+                <p id="weather"></p>
+            </div>
+            <img id="upper-figure" src="images/blob2.svg" alt="">
         </div>
-    </section>
+        <div class="container">
+            <img id="main-figure" src="images/path3.png" alt="">
+            <div class="container-text">
+                <div class="joke">
+                    <p id="title">Preparat per riure?</p>
+                    <p id="text"></p>
+                </div>
+
+                <div id="buttons">
+                    <button type="button" class="btn" id="face-frown" style="display: none" onclick="findOutScore()"><i
+                            class="fa-regular fa-face-frown fa-lg" style="color: #deda5e;"></i></button>
+                    <button type="button" class="btn" id="face-meh" style="display: none" onclick="findOutScore()"><i
+                            class="fa-regular fa-face-meh fa-lg" style="color: #deda5e;"></i></button>
+                    <button type="button" class="btn" id="face-smile" style="display: none" onclick="findOutScore()"><i
+                            class="fa-regular fa-face-smile fa-lg" style="color: #deda5e;"></i></button>
+                </div>
+
+                <input id="next-joke" type="button" value="Següent acudit" onclick="rateJoke()">
+            </div>
+        </div>
+        <img id="lower-figure" src="images/blob3.svg" alt="">
+    </div>
     <script src="index.js"></script>
 </body>
 
