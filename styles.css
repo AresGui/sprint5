@@ -1,25 +1,90 @@
 body {
-    background-color: grey;
+    background-color: #fff;
 }
 
+#left-container {
+    display: flex;
+    flex-direction: row;
+    max-width: auto;
+}
 
+#sol {
+    max-width: 50px;
+    max-height: 50px;
+    padding: 10px;
+}
 
-.container {
-    background-color: white;
-    width: 90%;
-    max-width: 500px;
-    margin: 100px auto;
-    border-radius: 5px;
-    padding: 20px 0;
+#weather {
+    font-family: "Montserrat", sans-serif;
+    font-size: large;
+    align-self: center;
+    border-left: 2px solid;
+    padding: 10px;
+
+}
+
+#upper-figure {
+    max-width: 100px;
+    max-height: auto;
+
+    align-self: flex-end;
+    margin-left: 800px;
+}
+
+#main-container {
     display: flex;
     flex-direction: column;
+}
 
-    text-align: justify;
+.container {
+    overflow: hidden;
 
-    min-height: 100%;
-    width: 100%;
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#main-figure {
+    max-width: 100%;
+
+
+    max-height: 100%;
+    padding: 0 !important;
+
+    display: block;
 
 }
+
+#lower-figure {
+    max-width: 100px;
+    max-height: auto;
+
+    align-self: flex-start;
+    margin: 0 250px;
+}
+
+.container-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+
+    padding: 20px 70px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+
+}
+
 
 #title {
     display: flex;
@@ -36,18 +101,19 @@ body {
     padding: 10px 0;
 }
 
-#next-joke,
-#start-btn {
+#next-joke {
     width: fit-content;
     display: flex;
     align-self: center;
     padding: 10px;
     font-size: 13px;
-    margin: 10px;
-    background-color: #52bbdb;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    margin: 20px 0;
+    background-color: #deda5e;
+    color: black;
+    border-radius: 20px;
+    border-color: rgb(64, 63, 63) 5px;
+
+    box-shadow: 5px 5px 10px 2px #deda5e;
 }
 
 
@@ -59,15 +125,17 @@ body {
 
 #face-frown {
     border: none;
-    background-color: white;
+    background-color: #885797;
+
 }
 
 #face-meh {
     border: none;
-    background-color: white;
+    background-color: #885797;
+
 }
 
 #face-smile {
     border: none;
-    background-color: white;
+    background-color: #885797;
 }

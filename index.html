@@ -13,26 +13,38 @@
 </head>
 
 <body>
-    <section>
-        <div class="container">
-            <div class="joke">
+    <div id="main-container">
+        <div id="left-container">
+            <div>
+                <img id="sol" src="images/sun.png" alt="">
+            </div>
+            <div>
                 <p id="weather"></p>
-                <p id="title">Preparat per riure?</p>
-                <p id="text"></p>
             </div>
-
-            <div id="buttons">
-                <button type="button" class="btn" id="face-frown" style="display: none" onclick="findOutScore()"><i
-                        class="fa-regular fa-face-frown fa-lg" style="color: #deda5e;"></i></button>
-                <button type="button" class="btn" id="face-meh" style="display: none" onclick="findOutScore()"><i
-                        class="fa-regular fa-face-meh fa-lg" style="color: #deda5e;"></i></button>
-                <button type="button" class="btn" id="face-smile" style="display: none" onclick="findOutScore()"><i
-                        class="fa-regular fa-face-smile fa-lg" style="color: #deda5e;"></i></button>
-            </div>
-
-            <input id="next-joke" type="button" value="Següent acudit" onclick="rateJoke()">
+            <img id="upper-figure" src="images/blob2.svg" alt="">
         </div>
-    </section>
+        <div class="container">
+            <img id="main-figure" src="images/path3.png" alt="">
+            <div class="container-text">
+                <div class="joke">
+                    <p id="title">Preparat per riure?</p>
+                    <p id="text"></p>
+                </div>
+
+                <div id="buttons">
+                    <button type="button" class="btn" id="face-frown" style="display: none" onclick="findOutScore()"><i
+                            class="fa-regular fa-face-frown fa-lg" style="color: #deda5e;"></i></button>
+                    <button type="button" class="btn" id="face-meh" style="display: none" onclick="findOutScore()"><i
+                            class="fa-regular fa-face-meh fa-lg" style="color: #deda5e;"></i></button>
+                    <button type="button" class="btn" id="face-smile" style="display: none" onclick="findOutScore()"><i
+                            class="fa-regular fa-face-smile fa-lg" style="color: #deda5e;"></i></button>
+                </div>
+
+                <input id="next-joke" type="button" value="Següent acudit" onclick="rateJoke()">
+            </div>
+        </div>
+        <img id="lower-figure" src="images/blob3.svg" alt="">
+    </div>
     <script src="index.js"></script>
 </body>
 

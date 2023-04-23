@@ -6,11 +6,14 @@ async function firstFunction() {
         }
     })
 
-    console.log(weatherForecast);
     const forecast = await weatherForecast.json();
     const getTemperature = forecast["current_weather"].temperature;
+
     console.log(getTemperature);
-    document.getElementById("weather").innerHTML = getTemperature;
+
+
+
+    document.getElementById("weather").innerHTML = `${getTemperature} ºC`;
 };
 
 firstFunction();
